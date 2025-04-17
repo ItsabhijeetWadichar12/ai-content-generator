@@ -19,10 +19,9 @@ import Link from 'next/link';
     const [maxWordsPer,setMaxWordsPer] = useState<number>(10000)
     const {updateUsage , setUpdateUsage} = useContext(UpdateUsageContext);
     const GetDATA = async()=>{
-        {/* @ts-ignore */}
-
+{/* @ts-ignore */}
         const result:HISTORY = await db.select().from(AIOutput)
-        .where(eq(AIOutput.createdBy , user?.primaryEmailAddress?.emailAddress));
+        .where(eq(AIOutput?.createdBy , user?.primaryEmailAddress?.emailAddress));
         {/* @ts-ignore */}
         GetTotalUsage(result);
         
@@ -48,7 +47,7 @@ import Link from 'next/link';
 
     const InUserPricing=async()=>{
         const result = await db.select().from(UserPurchase)
-        .where(eq(UserPurchase.userEmail,user?.primaryEmailAddress?.emailAddress))
+        .where(eq(UserPurchase?.userEmail,user?.primaryEmailAddress?.emailAddress))
 
         if(result){
             setUserPriceing(true);
