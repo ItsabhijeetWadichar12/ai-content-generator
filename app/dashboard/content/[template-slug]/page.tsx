@@ -80,12 +80,12 @@ function CreateNewContent(props:PROPS) {
     }
     
   return (
-    <div className='p-10'>
+    <div className='p-10 bg-white dark:bg-gray-900 text-gray-900 dark:text-white'>
         <Link href={"/dashboard"}>
         <Button className='text-md'> <ArrowLeft className='mr-2 w-4 h-4' /> Back</Button>
         </Link>
 
-    <div className='grid grid-cols-1 md:grid-cols-3 gap-5 p-5 py-5'>
+    <div className='grid grid-cols-1 md:grid-cols-3 gap-5 p-5 py-5 '>
         {/* FormSection  */}
         <FormSection selectedTemplates={selectedTemplates} userFormData={(v:any)=>GenearatAIContent(v)} loading={Loading}/>
 

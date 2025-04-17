@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
-import { log } from 'console'
+
 import { Loader2Icon } from 'lucide-react'
 
 
@@ -34,9 +34,9 @@ function FormSection({selectedTemplates , userFormData , loading}:PROPS) {
         
     }
   return (
-    <div className='p-5 shadow-md border rounded-lg bg-white'>
+    <div className='p-5 shadow-md border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white'>
         {/* @ts-ignore */}
-        <Image src={selectedTemplates?.icon} alt='icon' width={50} height={50}/>
+        <Image src={selectedTemplates?.icon} alt='icon' width={50} height={50} />
         <h2 className='font-bold text-2xl mb-3 text-purple-500'>{selectedTemplates?.name}</h2>
         <p className='text-sm text-gray-500'>{selectedTemplates?.desc}</p>
 
