@@ -74,13 +74,13 @@ function HistoryPage() {
 
 
   return (
-    <div className="p-6 max-w-full mx-auto">
+  <div className="p-6 max-w-full mx-auto bg-white dark:bg-gray-900 text-gray-900 dark:text-white ">
       <h1 className="text-2xl font-bold mb-4">History</h1>
       <p>Search your previously generated AI Content</p>
       <div className="overflow-x-auto mt-4">
-        <table className="w-full border-collapse border border-gray-300">
+        <table className="w-full border-collapse border bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
           <thead>
-            <tr className="bg-gray-200">
+            <tr className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white ">
               <th className="border border-gray-300 px-4 py-2">TEMPLATE</th>
               <th className="border border-gray-300 px-4 py-2">AIRESP</th>
               <th className="border border-gray-300 px-4 py-2">DATE</th>

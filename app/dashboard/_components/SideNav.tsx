@@ -42,18 +42,20 @@ function SideNav() {
         
     })
   return (
-    <div className='h-screen relative p-5 shadow-sm border bg-white'>
+    <div className='h-screen relative p-5 shadow-sm borderbg-white dark:bg-gray-900 text-gray-900 dark:text-white'>
         <div className='flex justify-center'>
-        <Image src="/logo.svg" width={120} height={100} alt='logo'/>
-
+            <Link href={"/"}>
+        {/* <Image src="/logo.svg" width={120} height={100} alt='logo'/> */}
+        <h2 className='text-blue-300 font-bold text-lg'>MENU</h2>
+        </Link>
         </div>
         <hr className='my-6 border'/>
 
         <div className='mt-3'>
             {menuList?.map((menu , index)=>(
                 <Link href={menu?.path}>
-                <div className={`flex gap-2 mb-2 p-3 hover:bg-primary hover:text-white rounded-lg cursor-pointer mt-5
-                    ${path==menu?.path&&'bg-primary text-white'}
+                <div className={`flex gap-2 mb-2 p-3 hover:bg-slate-500 hover:text-white rounded-lg cursor-pointer mt-5
+                    ${path==menu?.path&&'bg-emerald-600 text-white'}
                     `  
                 }>
                     <menu.icon className='w-7 h-7'/>

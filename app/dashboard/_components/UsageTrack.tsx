@@ -59,9 +59,9 @@ import Link from 'next/link';
 
   return (
     <div className='m-5'>
-        <div className='bg-primary text-white rounded-lg p-5'>
+        <div className='bg-cyan-600 text-white rounded-lg p-5'>
             <h2 className='font-medium'>Credits </h2>
-            <div className='h-2 bg-[#9981f9] w-full rounded-full mt-3'>
+            <div className='h-2 bg-[#395357] w-full rounded-full mt-3'>
                 <div className='h-2 bg-white rounded-full'
                 style={{
                     width:(totalUsage/maxWordsPer)*100+"%"

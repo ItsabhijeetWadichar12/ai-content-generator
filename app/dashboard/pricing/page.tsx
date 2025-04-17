@@ -91,28 +91,28 @@ function Pricing() {
   }
 
   return (
-    <>
-      <div className="flex items-center justify-center mt-5">
-        <h2 className="text-5xl text-black font-bold underline">Pricing</h2>
+    <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+      <div className="flex items-center justify-center mt-5  bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+        <h2 className="text-5xl text-blue-300 font-bold underline">Pricing</h2>
       </div>
       <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
           {/* PRO PLAN */}
           <div className="rounded-2xl border border-indigo-600 p-6 shadow-xs ring-1 ring-indigo-600 sm:order-last sm:px-8 lg:p-12">
             <div className="text-center">
-              <h2 className="text-lg font-medium text-gray-900">Pro Plan</h2>
+              <h2 className="text-lg font-medium bg-white dark:bg-gray-900 text-gray-900 dark:text-white">Pro Plan</h2>
               <p className="mt-2 sm:mt-4">
-                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                <strong className="text-3xl font-bold bg-white dark:bg-gray-900 text-gray-900 dark:text-white sm:text-4xl">
                   ₹99
                 </strong>
-                <span className="text-sm font-medium text-gray-700"> /month</span>
+                <span className="text-sm font-medium bg-white dark:bg-gray-900 text-gray-900 dark:text-white"> /</span>
               </p>
             </div>
 
             <ul className="mt-6 space-y-2">
               <li className="flex items-center gap-1">✔️ Unlimited Tokens</li>
               <li className="flex items-center gap-1">✔️ Modify</li>
-              <li className="flex items-center gap-1">✔️ 10+ content</li>
+              <li className="flex items-center gap-1">✔️ 50+ content</li>
               <li className="flex items-center gap-1">✔️ Email support</li>
               <li className="flex items-center gap-1">✔️ Help center access</li>
             </ul>
@@ -129,21 +129,21 @@ function Pricing() {
           </div>
 
           {/* STARTER PLAN */}
-          <div className="rounded-2xl border border-gray-200 p-6 shadow-xs sm:px-8 lg:p-12">
+          <div className="rounded-2xl border bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-6 shadow-xs sm:px-8 lg:p-12">
             <div className="text-center">
-              <h2 className="text-lg font-medium text-gray-900">Current Plan</h2>
+              <h2 className="text-lg font-medium bg-white dark:bg-gray-900 text-gray-900 dark:text-white">Current Plan</h2>
               <p className="mt-2 sm:mt-4">
-                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                <strong className="text-3xl font-bold bg-white dark:bg-gray-900 text-gray-900 dark:text-white sm:text-4xl">
                   ₹0
                 </strong>
-                <span className="text-sm font-medium text-gray-700"> /month</span>
+                <span className="text-sm font-medium bg-white dark:bg-gray-900 text-gray-900 dark:text-white"> /</span>
               </p>
             </div>
 
             <ul className="mt-6 space-y-2">
               <li className="flex items-center gap-1">✔️ 10000 tokens </li>
               <li className="flex items-center gap-1">❌ Not Modify</li>
-              <li className="flex items-center gap-1">✔️ 10+ content</li>
+              <li className="flex items-center gap-1">✔️ 50+ content</li>
               <li className="flex items-center gap-1">❌ Email support</li>
               <li className="flex items-center gap-1">✔️ Help center access</li>
             </ul>
@@ -155,7 +155,7 @@ function Pricing() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
