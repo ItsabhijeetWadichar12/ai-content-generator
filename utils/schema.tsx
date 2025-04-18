@@ -17,6 +17,7 @@ export const UserPurchase= pgTable('userPurchase',{
     userName:varchar('name'),
     active:boolean('active'),
     paymentId:varchar('paymentId'),
+    SubId: varchar("SubId", { length: 255 }).notNull(),
     joinDate:varchar('joinDate')
     
 })

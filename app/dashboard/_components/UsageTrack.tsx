@@ -16,7 +16,7 @@ import Link from 'next/link';
     const {user} = useUser();
     const {totalUsage , setTotalUsage} = useContext(TotalUsageContext);
     const {userPriceing , setUserPriceing} = useContext(UserPricingContext);
-    const [maxWordsPer,setMaxWordsPer] = useState<number>(10000)
+    const [maxWordsPer,setMaxWordsPer] = useState<number>(0)
     const {updateUsage , setUpdateUsage} = useContext(UpdateUsageContext);
     const GetDATA = async()=>{
 {/* @ts-ignore */}
@@ -48,11 +48,15 @@ import Link from 'next/link';
 {/* @ts-ignore */}
 
         const result = await db.select().from(UserPurchase).where(eq(UserPurchase?.userEmail,user?.primaryEmailAddress?.emailAddress))
-
-        if(result){
-            setUserPriceing(true);
-            setMaxWordsPer(100000000)
-        }
+  // Check if the latest record is active
+  const activePurchase = result?.find((r) => r.active === true);
+  if (activePurchase) {
+    setUserPriceing(true);
+    setMaxWordsPer(100000000); // Unlimited usage
+  } else {
+    setUserPriceing(false);
+    setMaxWordsPer(10000); // Free plan limit
+  }
     }
 
     
